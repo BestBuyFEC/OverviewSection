@@ -6,24 +6,23 @@ import styled from 'styled-components';
 
 function App() {
 
+  const [loading, setLoading] = useState(true)
   const [description, setDescription] = useState([]);
   const [features, setFeatures] = useState([]);
 
-
- 
   useEffect(() => {
-    fetchDescription()
-    fetchFeatures()
+    fetchDescription();
+    // fetchFeatures();
+    
   }, [])
 
   // useEffect(() => {
   //   fetchFeatures()
   // }, [])
 
-  const fetchDescription = () => {
-    fetch('http://localhost:3030/description')
+  const fetchDescription = async () => {
+    await fetch('http://localhost:3030/description')
       .then((res) => res.json())
-      // .then((data) => setDescription(data))
       .then((data) => setDescription(data.map((elem) => (
         {
           id: elem.id,
@@ -33,13 +32,11 @@ function App() {
         }
       ))))
       .catch((error) => console.log(error))
-      console.log(description[0])
-  }
+      console.log(description)
+      
 
-  const fetchFeatures = () => {
-    fetch('http://localhost:3030/features')
+      await fetch('http://localhost:3030/features')
       .then((res) => res.json())
-      // .then((data) => setDescription(data))
       .then((data) => setFeatures(data.map((elem) => (
         {
           id: elem.id,
@@ -48,18 +45,40 @@ function App() {
         }
       ))))
       .catch((error) => console.log(error))
-      console.log(features[0])
+      console.log(features)
+
+      setLoading(false);
   }
 
-  return (
-    <AppContainer>
-      <h3>{description[0].name}</h3>
-      <h3>{description[0].body}</h3>
-      <h3>{features[0].body}</h3>
-    </AppContainer>
-    
-  )
-}
+  const fetchFeatures = async () => {
+    await fetch('http://localhost:3030/features')
+      .then((res) => res.json())
+      .then((data) => setFeatures(data.map((elem) => (
+        {
+          id: elem.id,
+          body: elem.features_body,
+          sku: elem.sku
+        }
+      ))))
+      .catch((error) => console.log(error))
+      console.log(features)
+  }
+
+    if(loading === true){
+      console.log('loading')
+      return(
+        <h1 className="header">Loading</h1>
+      )
+    } else {
+      return (
+       <AppContainer>
+          <h3>{description[0].name}</h3>
+          <h3>{description[0].body}</h3>
+          <h3>{features[0].body}</h3>
+        </AppContainer>
+      )
+    }
+    }
 
 export default App;
 
