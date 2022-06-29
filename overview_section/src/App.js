@@ -3,7 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import styled from 'styled-components';
-import { useRef } from 'react';
+// import { useRef } from 'react';
 import { ChevronDown } from '@styled-icons/bootstrap';
 import Collapsible from 'react-collapsible';
 
@@ -12,9 +12,9 @@ function App() {
   const [loading, setLoading] = useState(true)
   const [description, setDescription] = useState([]);
   const [features, setFeatures] = useState([]);
-  const dropdownRef = useRef(null);
-  const [isActive, setIsActive] = useState(false);
-  const onClickSet = () => setIsActive(!isActive);
+  // const dropdownRef = useRef(null);
+  // const [isActive, setIsActive] = useState(false);
+  // const onClickSet = () => setIsActive(!isActive);
 
   useEffect(() => {
     fetchData();
@@ -118,6 +118,7 @@ const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 13px;
+  margin: 0;
 `
 const OverviewContainer = styled.nav`
 font-family: Arial,Helvetica,sans-serif;
