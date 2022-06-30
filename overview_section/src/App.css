@@ -7,7 +7,6 @@ body {
   margin: 0 !important;
   justify-content: center;
   background-color: #fff;
-  max-width: 1500px;
 }
 
 .Collapsible{
@@ -16,24 +15,22 @@ body {
   margin-left: 90px;
   margin-right: 90px;
   min-width: 1050px;
-  /* justify-content: center; */
-  /* text-align: center; */
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .Collapsible span{
-  /* display: flex; */
   padding-top: 25px;
-  /* padding-bottom: 25px; */
-  padding-right: 1030px;
+  padding-right: 1000px;
 }
 
 .Collapsible svg{
-  padding-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 .Collapsible svg:hover{
   cursor: pointer;
-  /* justify-items: center; */
 }
 
 
@@ -44,20 +41,14 @@ body {
 
 .Collapsible__contentOuter{
   border-bottom: 1px solid lightgray;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
   padding-bottom: 20px;
-  padding-top: 20px;
 }
 
 .Collapsible__trigger{
-  /* width: 200px; */
   font-size: 27px;
   font-weight: bold;
   font-family: Arial,Helvetica,sans-serif;
-  
-
+  padding-bottom: 20px;
 }
 
 .Collapsible__trigger:hover {
