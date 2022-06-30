@@ -117,6 +117,7 @@ export default App;
 const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
+  max-width: 1500px;
   font-size: 13px;
   margin: 0;
 `
@@ -178,6 +179,7 @@ const Divider = styled.div`
 const DownArrowIcon = styled(ChevronDown)`
   height: 20px;
   justify-self: flex-end;
+  position: fixed;
 `
 
 
