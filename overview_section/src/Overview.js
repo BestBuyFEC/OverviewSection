@@ -78,7 +78,7 @@ function App() {
     } else {
         return (
         <AppContainer>
-          <Collapsible tabIndex={1} trigger='Overview' triggerSibling={<DownArrowIcon/>} transitionTime={200} overflowWhenOpen={'auto'}>
+          <Collapsible tabIndex={1} trigger='Overview' triggerSibling={<DownArrowIcon/>} transitionTime={200} overflowWhenOpen={'unset'}>
           <OverviewContainer> 
             {/* <h1 className='overview'>Overview</h1>
             <DownArrowIcon onClick={onClickSet} className="menu-trigger"></DownArrowIcon>
@@ -117,7 +117,7 @@ export default App;
 const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 1500px;
+  /* max-width: 1500px; */
   font-size: 13px;
   margin: 0;
 `
@@ -146,7 +146,7 @@ const DescriptionTitle = styled.div`
 `
 const DescriptionBody = styled.div`
   display: flex;
-  max-width: 900px;
+  /* max-width: 900px; */
   font-size: 13px;
   h3{
     font-weight: normal;
@@ -166,7 +166,7 @@ const FeaturesTitle = styled.div`
    }
 `
 const FeaturesBody = styled.div`
-  max-width: 900px;
+  /* max-width: 900px; */
 
 `
 const Divider = styled.div`
@@ -179,7 +179,7 @@ const Divider = styled.div`
 const DownArrowIcon = styled(ChevronDown)`
   height: 20px;
   justify-self: flex-end;
-  position: fixed;
+  /* position: fixed; */
 `
 
 
