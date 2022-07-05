@@ -9,22 +9,21 @@ body {
   background-color: #fff;
 }
 
-.Collapsible{
+/* .Collapsible{
   border-top: 1px solid lightgray;
-  height: 50px;
   margin-left: 90px;
   margin-right: 90px;
   min-width: 1050px;
   padding-top: 20px;
   padding-bottom: 20px;
-}
+} */
 
-.Collapsible span{
+/* .Collapsible span{
   padding-top: 25px;
   padding-right: 1000px;
-}
+} */
 
-.Collapsible svg{
+/* .Collapsible svg{
   padding-top: 10px;
   padding-bottom: 20px;
 }
@@ -40,7 +39,6 @@ body {
 }
 
 .Collapsible__contentOuter{
-  border-bottom: 1px solid lightgray;
   padding-bottom: 20px;
 }
 
@@ -49,6 +47,7 @@ body {
   font-weight: bold;
   font-family: Arial,Helvetica,sans-serif;
   padding-bottom: 20px;
+  width: 900px
 }
 
 .Collapsible__trigger:hover {
@@ -57,4 +56,4 @@ body {
 
 .Collapsible__trigger svg.is-open {
   transform: rotateZ(180deg);
-}
+} */
